@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Tracker</title>
+
+
+  <style>
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    #modal{
+      width: 80vw;
+      max-width: 700px;
+      min-width: 400px;
+      max-height: 80%;
+      overflow-y: auto;
+      background-color: rgb(220, 220, 220);
+      box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.217);
+      border-radius: 20px;
+      padding: 50px;
+    }
+
+    fieldset{
+      padding: 20px;
+    }
+
+    .task_container{
+      position: relative;
+    }
+
+    label{
+      width: 100%;
+      display: block;
+    }
+
+    #delete_task{
+      position: absolute ;
+      right: 10px;
+      top: 10px;
+      background-color: red;
+      padding: 5px;
+    }
+
+    #add_another_task{
+      position: absolute ;
+      right: 10px;
+      bottom: 10px;
+    }
+
+  </style>
+</head>
+<body>
+  
+  <div id="modal">
+
+
+      <fieldset>
+        <legend>Project</legend>
+        <label for="project_name">
+          Project Name: <input type="text" name="project_name" id="project_name" >
+        </label>
+
+        <label for="date_start">
+          Date Start: <input type="date" name="date_start" id="date_start" >
+        </label>
+
+        <label for="est_day">
+          Estimated Number Of Days: <input type="number" name="est_day" id="est_day" >
+        </label>
+
+      </fieldset>
+
+      <button id="add_task">Add Task</button>
+
+      <!-- <fieldset class="task_container">
+        <button id="delete_task">X</button>
+        <legend>task 1</legend>
+
+        <label for="task1_name">
+          Task Name: <input type="text" name="task1_name" id="task1_name" >
+        </label>
+
+        <label for="est_date_start">
+          Estimated Date Start: <input type="date" name="est_date_start" id="est_date_start" >
+        </label>
+
+        <label for="est1_day">
+          Estimated Number Of Days: <input type="number" name="est1_day" id="est1_day" >
+        </label>
+
+        <button class="add_dependencies">Add Dependencies</button>
+    
+
+        <div class="dependencies_container">
+          <label for="est1_day">
+            <input type="number" name="est1_day" id="est1_day" >
+            <input type="button" value="X" style="background-color: red; padding: 0 5px;">
+          </label>
+        </div>
+
+        <button id="add_another_task">Add Another Task</button>
+
+      </fieldset> -->
+
+
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
